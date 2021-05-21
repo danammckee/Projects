@@ -6,3 +6,6 @@ Poutine Crawl of Québec City
 ![Poutine Crawl](https://danammckee.github.io/projects/SeaLevelRise_Victoria_BC.pdf)
 
 
+![Poutine Crawl](https://danammckee.github.io/projects/SeaLevelRise_Victoria_BC.jpg)
+
+
