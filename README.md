@@ -17,4 +17,6 @@ Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/inde
 
 The Liberty Project [Ride 4 Freedom](https://www.the-libertyproject.org/ride-4-freedom) Event Webpage
 
+## Training and Certification
 
+ESRI Training [Transcript](https://danammckee.github.io/Projects/ESRITraining/Dana_McKee_ESRITrainingTranscript.pdf)
