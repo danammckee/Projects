@@ -17,6 +17,10 @@
 
 * #### The Liberty Project [Ride 4 Freedom](https://www.the-libertyproject.org/ride-4-freedom) Event Webpage
 
+* #### Exploring GNSS Accuracy and Precision [Story Map](https://storymaps.arcgis.com/stories/486c2e8f1c4e43d28a85ecc38877fc4d)
+
+* #### COVID 19 Cases in Toronto, Ontario [Dashboard](https://fleming.maps.arcgis.com/apps/dashboards/d4b1d1890832486484e9274455c2a012)
+
 ## Training and Certification
 
 #### ESRI Training [Transcript](https://danammckee.github.io/Projects/ESRITraining/Dana_McKee_ESRITrainingTranscript.pdf)
