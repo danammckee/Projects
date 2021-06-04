@@ -3,15 +3,15 @@
 
 ## Maps
 
-Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/SeaLevelRise_Victoria_BC.jpg)
-Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/SeaLevelRise_Victoria_BC.pdf)
+Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.jpg)
+Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
 
-![Vulnerability Sea Level Rise: Victoria, BC](https://danammckee.github.io/Projects/SeaLevelRise_Victoria_BC.jpg)
+![Vulnerability Sea Level Rise: Victoria, BC](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.jpg)
 
-Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/PoutineCrawlofQuebecCity.jpg)
-Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/PoutineCrawlofQuebecCity.pdf)
+Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
+Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
 
-![Poutine Crawl](https://danammckee.github.io/Projects/PoutineCrawlofQuebecCity.jpg)
+![Poutine Crawl](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
 
 ## Websites
 
