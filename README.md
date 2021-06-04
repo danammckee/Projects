@@ -17,4 +17,4 @@ Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Poutin
 
 Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/index.html)
 
-The Liberty Project [Ride 4 Freedom] (https://www.the-libertyproject.org/ride-4-freedom) Event Webpage
+The Liberty Project [Ride 4 Freedom](https://www.the-libertyproject.org/ride-4-freedom) Event Webpage
