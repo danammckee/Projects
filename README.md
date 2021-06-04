@@ -23,4 +23,4 @@
 
 ## Training and Certification
 
-#### ESRI Training [Transcript](https://danammckee.github.io/Projects/ESRITraining/Dana_McKee_ESRITrainingTranscript.pdf)
+* #### ESRI Training [Transcript](https://danammckee.github.io/Projects/ESRITraining/Dana_McKee_ESRITrainingTranscript.pdf)
