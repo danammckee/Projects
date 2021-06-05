@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>British Columbia Ski Hills</title>
+	
+	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" 
+		rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" 
+		rel="stylesheet">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script
+		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+		  defer
+		></script>
+		<style type="text/css">	
+			#map {
+				height: 100%;
+				width: 100%;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				border-style: double;
+				border-width: 20px;
+				border-color: rgb(42, 160, 160);
+			}
+			
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				font-family: 'Hind', sans-serif;
+			  }
+
+			.titleblock {
+			  background-color: rgb(42, 160, 160);
+			  text-align: center;
+			  color: white;
+			  padding: 30px;
+			  margin-bottom: 10px;
+			}
+			
+			.title {
+				font-size: 50px;
+			}
+
+			.subtitle {
+				font-size: 30px;
+			}
+			
+			.skititle {
+				font-size: 60px;
+			}
+
+			.skiheader {
+				text-decoration: underline;
+				text-decoration-color: rgb(42, 160, 160);
+				font-size: 30px;
+			}
+			
+			.firstHeading {
+				color: rgb(42, 160, 160);
+				font-size: 20px;
+			}
+			
+			.skiwords {
+				font-size: 20px;
+			}
+			
+			.skiwords2 {
+				font-size: 50px;
+				color: rgb(42, 160, 160);
+				font-weight: bold;
+				text-align: center;
+			}
+			
+			.section {
+				padding-right: 60px;
+				padding-left: 60px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			
+			.nav {
+			  overflow: hidden;
+			  background-color: LightGray;
+			  border: 3px solid #686868;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+			  padding: 10px;
+			} 
+
+			li a {
+			  float: left;
+			  display: block;
+			  color: Black;
+			  text-align: center;
+			  padding: 8px;
+			  text-decoration: none;
+			}
+
+			ul {
+			  list-style-type: none;
+			  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+			  font-weight: bold;
+			  padding: 0;
+			  margin: 0;
+			}
+	
+			li a:hover {
+			  background-color: rgb(42, 160, 160);
+			  color: black;
+			}
+						
+			.footer {
+				bottom: 0;
+				left: 0;
+				right: 0;
+				letter-spacing: 0.11em;
+				margin-top: 10px;
+				margin-bottom: 1%;
+				background-color: rgb(49, 153, 167);
+				padding: 4px 0 4px 0;
+			}
+
+			.footertext {
+				position: relative;
+				color: white;
+				text-align: center;
+				padding: 0;
+			}
+
+			.footertext2 {
+				position: relative;
+				font-size: 15px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				padding: 0;
+			}
+
+
+			@media (max-width: 600px) {
+			  .column {
+				width: 100%;
+			  }
+	</style>
+    <script>
+	var icons = { snowflake: { icon: "http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png" } };
+	//http://maps.google.com/mapfiles/kml/pal2/icon56.png//
+
+	//TITLE | POSITION - LAT , LNG | ICON | TITLE | CONTENT
+	var resorts = [
+		{ 
+			title: "Wapiti Ski Club", 
+			position: { lat: 50.021685, lng: -114.9380363 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><h1 id="firstHeading" class="firstHeading">Wapiti Ski Club</h1><div id="bodyContent"><p><b>Wapiti Ski Club: </b> A hill that the entire family will enjoy</p> <p>Visit the <a href="https://wapitiskiclub.com/">resort site</a> for more information about your next trip!</p></div></div>'
+		},
+		
+		{ 
+			title: "Summit Lake Ski Area", 
+			position: { 
+				lat: 50.1454638, 
+				lng: -117.6143793 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Summit Lake Ski Area</h1><div id="bodyContent"><p><b>Summit Lake Ski Area: </b> Experience the Kootenays at this community oriented hill</p> <p>Visit the <a href="https://skisummitlake.com/">resort site</a> for more information about your next trip!</p></div></div>'
+		},
+		{
+			title: "Sasquatch Mountain Resort",
+			position: {
+				lat: 49.3801115,
+				lng: -121.9354366, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Sasquatch Mountain Resort</h1><div id="bodyContent"><p><b>Sasquatch Mountain Resort: </b>Find powder days close to Vancouver</p> <p>Visit the <a href="https://sasquatchmountain.ca/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Apex Mountain Resort",
+			position: {
+				lat: 49.3904157,
+				lng: -119.9047316, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Apex Mountain Resort</h1><div id="bodyContent"><p><b>Apex Mountain Resort: </b>Home to the coolest James around</p> <p>Visit the <a href="https://www.apexresort.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Salmo Ski Hill",
+			position: {
+				lat: 49.1863972,
+				lng: -117.3015278, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Salmo Ski Hill</h1><div id="bodyContent"><p><b>Salmo Ski Hill: </b>Volunteer run and famous for its night skiing</p> <p>Visit the <a href="http://skisalmo.com/?fbclid=IwAR2z07rYrRc6hMTCj9x1HtiCZNTDx4lOJguQQDxnrB1AXksim4BBmY53kgI">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Fernie Alpine Resort",
+			position: {
+				lat: 49.4628444, 	
+				lng: -115.0872374 },
+			icon: 'snowflake',
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Fernie Alpine Resort</h1><div id="bodyContent"><p><b>Fernie Alpine Resort: </b>Find powder in the 5 legendary bowls</p> <p>Visit the <a href="https://skifernie.com/">resort site</a> for more information</p></div></div>'			
+			},
+		{
+			title: "Harper Mountain",
+			position: {
+				lat: 50.7230743,
+				lng: -120.138992, },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Harper Mountain</h1><div id="bodyContent"><p><b>Harper Mountain: </b>Visit the hill known as the Kamloops hidden gem!</p> <p>Visit the <a href="https://harpermountain.com/">resort site</a> for more information</p></div></div>'
+			},	
+		{
+			title: "Phoenix Mountain Ski Resort",
+			position: {
+				lat: 49.1092526,
+				lng: -118.5857632, },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Phoenix Mountain Ski Resort</h1><div id="bodyContent"><p><b>Phoenix Mountain Ski Resort: </b>The best little mountain in BC</p> <p>Visit the <a href="https://www.skiphoenix.ca/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Murray Ridge Ski Area",
+			position: {
+				lat: 54.5172275,
+				lng: -124.2097586, },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Murray Ridge Ski Area</h1><div id="bodyContent"><p><b>Murray Ridge Ski Area: </b>Travel up to Northern BC for this ski gem</p> <p>Visit the <a href="https://www.murrayridge.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Mount Seymour",
+			position: {
+				lat: 49.36533,
+				lng: -122.948213, },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mount Seymour</h1><div id="bodyContent"><p><b>Mount Seymour: </b>The closest mountain to downtown Vancouver</p> <p>Visit the <a href="https://mtseymour.ca/">resort site</a> for more information</p></div></div>'
+			},
+			
+			
+		{
+			title: "Fairmont Hot Springs Ski Hill",
+			position: {
+				lat: 50.3387641,
+				lng: -115.8265548, },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Fairmont Hot Springs Ski Hill</h1><div id="bodyContent"><p><b>Fairmont Hot Springs Ski Hill: </b>Enjoy the skiing at this charming hill in the Rockies </p> <p>Visit the <a href="https://www.fairmonthotsprings.com/ski-area/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Big White Ski Resort",
+			position: {
+				lat: 49.7266728,
+				lng: -118.9286326 },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Big White Ski Resort</h1><div id="bodyContent"><p><b>Big White Ski Resort: </b>Known as the favourite resort for families in Canada</p> <p>Visit the <a href="https://www.bigwhite.com/geo/bc">resort site</a> for more information</p></div></div>'
+			},
+	{
+			title: "Mount Baldy Ski Area",
+			position: {
+				lat: 49.1528266,
+				lng: -119.235785 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mount Baldy Ski Area</h1><div id="bodyContent"><p><b>Mount Baldy Ski Area: </b>Chase the alpine at the 3rd highest elevation in BC</p> <p>Visit the <a href="https://baldyresort.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Shames Mountain",
+			position: {
+				lat: 54.4844725,
+				lng: -128.9533636 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Shames Mountain</h1><div id="bodyContent"><p><b>Shames Mountain: </b>The first Co-op mountain in Canada! Find deep snowpacks at this BC mountain</p> <p>Visit the <a href="https://mymountaincoop.ca/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Troll Resort",
+			position: {
+				lat: 53.0660023,
+				lng: -121.942005 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Troll Resort</h1><div id="bodyContent"><p><b>Troll Resort: </b>A small mountain with big verticals to drop</p> <p>Visit the <a href="https://trollresort.com/">resort site</a> for more information</p></div></div>'
+		    },	
+		{
+			title: "Crystal Mountain Resort",
+			position: {
+				lat: 49.8810732,
+				lng: -119.7105691 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Crystal Mountain Resort</h1><div id="bodyContent"><p><b>Crystal Mountain Resort: </b>Not open yet but soon, Crystal will have 7,166 acres ready for you to shread</p> <p>Visit the <a href="https://crystalresort.ca/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Purden Ski Village",
+			position: {
+				lat: 53.9009836,
+				lng: -121.8839734 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Purden Ski Village</h1><div id="bodyContent"><p><b>Purden Ski Village: </b>The biggest mountain found in Central BC</p> <p>Visit the <a href="http://www.purden.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Mount Cain Alpine Park",
+			position: {
+				lat: 50.2187059,
+				lng: -126.3521018 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mount Cain Alpine Park</h1><div id="bodyContent"><p><b>Mount Cain Alpine Park: </b>Skip the crowds at this Vancouver Island resort</p> <p>Visit the <a href="https://www.mountcain.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Whistler Blackcomb Mountain",
+			position: {
+				lat: 50.1134381,
+				lng: -122.9545477 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Whistler Blackcomb Mountain</h1><div id="bodyContent"><p><b>Whistler Blackcomb Mountain: </b>World famous for a reason and number one in North America for a reason</p> <p>Visit the <a href="https://www.whistlerblackcomb.com/">resort site</a> for more information</p></div></div>'
+			},
+						
+		{
+			title: "Panorama Mountain Village",
+			position: {
+				lat: 50.4572978,
+				lng: -116.2386686 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Panorama Mountain Village</h1><div id="bodyContent"><p><b>Panorama Mountain Village: </b>Ski and stay deep in the heart of BC at this incredible resort</p> <p>Visit the <a href="https://www.panoramaresort.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Manning Park",
+			position: {
+				lat: 49.0692465,
+				lng: -120.9159271 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Manning Park</h1><div id="bodyContent"><p><b>Manning Park: </b>Endless adventure at this full-on BC ski experience</p> <p>Visit the <a href="https://www.manningpark.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Kicking Horse Mountian Resort",
+			position: {
+				lat: 51.2973743,
+				lng: -117.0451754 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Kicking Horse Mountian Resort</h1><div id="bodyContent"><p><b>Kicking Horse Mountian Resort: </b>Chase the steepest steeps when you visit the Champagne Powder Capital of Canada</p> <p>Visit the <a href="https://kickinghorseresort.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Cypress Mountain",
+			position: {
+				lat: 49.3956905,
+				lng: -123.2021823 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Cypress Mountain</h1><div id="bodyContent"><p><b>Cypress Mountain: </b>The biggest ski resort in Vancouver</p> <p>Visit the <a href="https://cypressmountain.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Powder King Mountain Resort",
+			position: {
+				lat: 55.365527,
+				lng: -122.609943 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Powder King Mountain Resort</h1><div id="bodyContent"><p><b>Powder King Mountain Resort: </b>Take a trip to this secret spot for no cell reception and fresh powder all day long</p> <p>Visit the <a href="https://ski.powderking.com/">resort site</a> for more information</p></div></div>'
+			},
+			{
+			title: " Mount Washington Alpine Resort",
+			position: {
+				lat: 49.7415107,
+				lng: -125.3039175 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading"> Mount Washington Alpine Resort</h1><div id="bodyContent"><p><b> Mount Washington Alpine Resort: </b>Visit the largest ski and snowboard resort on Vancouver Island</p> <p>Visit the <a href="https://www.mountwashington.ca/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: " Mt Timothy Ski Hill",
+			position: {
+				lat: 51.9047839,
+				lng: -121.2622874 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading"> Mt Timothy Ski Hill</h1><div id="bodyContent"><p><b> Mt Timothy Ski Hill: </b>Located in the middle of the Cariboo range of BC, experience no lines and champagne powder</p> <p>Visit the <a href="https://skitimothy.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Hudson Bay Mountain",
+			position: {
+				lat: 54.7686192,
+				lng: -127.2796617 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Hudson Bay Mountain</h1><div id="bodyContent"><p><b>Hudson Bay Mountain: </b>Tucked away beside the town of Smithers, this BC gem boasts two terrain parks</p> <p>Visit the <a href="https://hudsonbaymountain.ca/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Whitewater Ski Resort",
+			position: {
+				lat: 49.4429452,
+				lng: -117.1453923 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Whitewater Ski Resort</h1><div id="bodyContent"><p><b>Whitewater Ski Resort: </b>And epic adventure awaits you at this Kootenay BC ski resort</p> <p>Visit the <a href="https://skiwhitewater.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Kimberley Ski Resort",
+			position: {
+				lat: 49.6883619,
+				lng: -116.0047743 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Kimberley Ski Resort</h1><div id="bodyContent"><p><b>Kimberley Ski Resort: </b>Groomed runs and largest gladed terrain in North America awaits you here</p> <p>Visit the <a href="https://skikimberley.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Revelstoke Mountain Resort",
+			position: {
+				lat: 50.9592023,
+				lng: -118.1642368 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Revelstoke Mountain Resort</h1><div id="bodyContent"><p><b>Revelstoke Mountain Resortt: </b>With groomed runs, cliffs, and endless powder, be sure to visit this top BC hill</p> <p>Visit the <a href="https://www.revelstokemountainresort.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Grouse Mountain",
+			position: {
+				lat: 49.3721144,
+				lng: -123.0989765 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Grouse Mountain</h1><div id="bodyContent"><p><b>Grouse Mountain: </b>Visit the Peak of Vancouver at one of the most visited attractions in the city</p> <p>Visit the <a href="https://www.grousemountain.com/">resort site</a> for more information</p></div></div>'
+			},
+
+		{
+			title: "Sun Peaks Resort",
+			position: {
+				lat: 50.8775256,
+				lng: -119.9118599 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Sun Peaks Resort</h1><div id="bodyContent"><p><b>Sun Peaks Resort: </b>With three peaks to explore, you will not ever want to leave the second largest ski resort in Canada</p> <p>Visit the <a href="https://www.sunpeaksresort.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Silver Star Mountain Resort",
+			position: {
+				lat: 50.3590309,
+				lng: -119.0569966 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Silver Star Mountain Resort</h1><div id="bodyContent"><p><b>Silver Star Mountain Resort: </b>Boasting 132 runs, you will be sure to have endless fun at this BC resort</p> <p>Visit the <a href="https://www.skisilverstar.com/">resort site</a> for more information</p></div></div>'
+			},
+			
+		{
+			title: "Clearwater Ski Hill",
+			position: {
+				lat: 51.6368173,
+				lng: -120.0258254 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Clearwater Ski Hill</h1><div id="bodyContent"><p><b>Clearwater Ski Hill: </b>A humble and incredible local hill known to have the fastest "T" in the West</p> <p>Visit the <a href="https://clearwaterskihill.com/">resort site</a> for more information</p></div></div>'
+			},
+		{
+			title: "Tabor Mountain Ski Resort",
+			position: {
+				lat: 53.9431982,
+				lng: -122.453127 },
+			icon: "snowflake",
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Tabor Mountain Ski Resort</h1><div id="bodyContent"><p><b>Tabor Mountain Ski Resort: </b>Located just outside of Prince George. Currently closed</p> <p>Visit the <a href="http://www.tabormountain.com/">resort site</a> for more information</p></div></div>'
+			},
+		{ 
+			title: 'Red Mountain Resort', 
+			position: { 
+				lat: 49.1023786, 
+				lng: -117.8193897 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Red Mountain Resort</h1><div id="bodyContent"><p><b>Red Mountain Resort: </b> The first stop on BCs powder highway</p> <p>Visit the <a href="https://www.redresort.com/">resort site</a> for more information</p></div></div>'}
+	];
+
+	function initMap() {
+		
+		
+		var map = new google.maps.Map( document.getElementById('map'), {
+		  zoom: 6,
+		  center: { lat: 52.9009836, lng: -121.8839734 }, 
+		  mapTypeId: "satellite",
+		  streetViewControl: false,
+		});
+			  
+		var InfoWindows = new google.maps.InfoWindow({});
+		
+		resorts.forEach(function(resort) {	
+			var marker = new google.maps.Marker({
+			  position: { lat: resort.position.lat, lng: resort.position.lng },
+			  map: map,
+			  icon: icons[resort.icon].icon,
+			  title: resort.title
+			});
+			
+			marker.addListener('click', function() {
+			  InfoWindows.open(map, this);
+			  InfoWindows.setContent(resort.content);
+			});
+		});
+	}
+	</script>
+	</head>
+
+	<body>
+
+	<div class="titleblock">
+		<h1 class ="skititle">British Columbia Ski Hills</h1>
+		<p class="subtitle">Find the best powder in the world...</p>
+	</div>
+
+	<div class="section">
+		<div>
+			<h2 class="skiheader">Snow, Snow, and more Snow...</h2>
+			<p class="skiwords"> The mountains of British Columbia coupled with 
+			a weather pattern that creates endless centimemtres of snow, British Columbia
+			is a skier and snowboarder's paradise.  From a simple 30-minute drive out of 
+			downtown Vancouver that takes you into to the local Northshore mountain resorts of 
+			Cypress, Seymour, and Grouse mountain, to the most eastern hill of endless powder
+			days at Fernie Alpine Resort, the choices are endless. 
+			
+			<p class="skiwords">Zoom in and explore the resorts. Click on a snowflake to find 
+			out which mountains are located where in BC, a little tidbit on the resort, and a 
+			link to the mountain to find out more information about each one! Below the map are 
+			some ideas that may help you get started on planning your adventure. Time to start chasing some powder!</p>
+			
+	 	</div>
+	 </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+	<div class="section">
+		<div>
+			<h2 class="skiheader">Planning Your Trip</h2>
+			<p class="skiwords"> When visiting British Columbia for an amazing ski/snowboard
+			vacation, the endless choices may be a bit much.<p>
+			
+			<p class="skiwords"><b>LOCATION: </b> Start by accessing what type of 
+			adventure you want based on location.  Is ease of travel your priority?
+			Stick to resorts with major airports near them such as the local Vancouver mountains
+			and Whistler, or even head a bit fruther to Big White Ski Resort that has the Kelwona 
+			airport near by. With more planning, you can head deeper into the Province and seek out 
+			Resorts with the steepest steeps such as Kicking Horse Mountain by Golden, BC.</p>
+			<p class="skiwords"><b>POWDER:</b> Although you'll find plenty of snow at any of the
+			mountains in British Columbia, some will see more than others. If you are looking for
+			daily centimeter dumps of fresh powder, consider planning a trip along BC's famous 
+			<a href="https://www.redresort.com/">Powder Highway</a>. With seven resorts considered to be along this line, you'll experience everything
+			that BC is known for in the winter on the mountains.</p>
+			<p class="skiwords2">Happy shredding! </p>
+	 	</div>
+	</div>
+    <div class="footer">
+		<p class ="footertext">2021 Dana McKee GEOM 99  |  Data provided by <a href="https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/" target="_blank">BC Data Catalogue</a></p>
+	</div>
+
+</body>
+
+</html>
