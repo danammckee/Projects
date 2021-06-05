@@ -5,7 +5,7 @@
 
 1. ### 1. Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
 
-A simplistic design for tourists visiting Quebec City to enjoy the top poutine places in town.
+  A simplistic design for tourists visiting Quebec City to enjoy the top poutine places in town.
 
 ![Poutine Crawl](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
 
