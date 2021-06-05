@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Love, Saskatchewan</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.18/"></script>
+  <script>
+
+  require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/Graphic",
+    "esri/layers/GraphicsLayer"
+
+    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+
+  esriConfig.apiKey = "AAPK54f20e954f7343399bd7c0e42a023312VNgDv6gWf1mdrUfvhQ0OGz6WhjpAgXaebJhOk-ixi4GgDFP3xfXr0U-xb9av0MR3";
+
+  const map = new Map({
+    basemap: "arcgis-imagery" //Basemap layer service
+  });
+
+  const view = new MapView({
+    map: map,
+    center: [-104.1666,53.4866], //Longitude, latitude
+    zoom: 15,
+    container: "viewDiv"
+ });
+
+ const graphicsLayer = new GraphicsLayer();
+ map.add(graphicsLayer);
+
+ // Create a polygon geometry
+ const polygon = {
+    type: "polygon",
+    rings: [
+        [-104.167518, 53.481162], //Longitude, latitude
+        [-104.173183, 53.486180], //Longitude, latitude
+        [-104.173993, 53.487329], //Longitude, latitude
+	[-104.173993, 53.487329], //Longitude, latitude
+	[-104.169643, 53.489716], //Longitude, latitude
+	[-104.167497, 53.487261], //Longitude, latitude
+	[-104.164707, 53.489589], //Longitude, latitude
+	[-104.160008, 53.486761], //Longitude, latitude
+        [-104.162561, 53.484686],   //Longitude, latitude
+    ]
+ };
+
+ const simpleFillSymbol = {
+    type: "simple-fill",
+    color: [225, 0, 0, 0.8],  // Red, opacity 80%
+    outline: {
+        color: [153, 0, 0],
+        width: 10
+    }
+ };
+
+ const popupTemplate = {
+    title: "{Name}",
+ }
+ const attributes = {
+    Name: "Saskatechwan LOVES YOU!",
+ }
+
+ const polygonGraphic = new Graphic({
+    geometry: polygon,
+    symbol: simpleFillSymbol,
+
+    attributes: attributes,
+    popupTemplate: popupTemplate
+
+ });
+ graphicsLayer.add(polygonGraphic);
+
+ });
+</script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
