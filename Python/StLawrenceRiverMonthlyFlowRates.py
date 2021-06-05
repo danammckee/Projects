@@ -28,8 +28,6 @@
 # Table Formatting: Whale Mapping Version 2.2 Karen Whillans, https://www.educba.com/python-print-table/, 
 # CSV Data File: https://wateroffice.ec.gc.ca/search/historical_e.html
 
-# File: StLawrenceRiverMonthlyFlowRates.py
-# Date: November 30, 2020
 
 import csv                                  # csv used in week 12 for csv file reading/writing
 import matplotlib                           # (available on college system as indicated on VDI)
@@ -54,7 +52,7 @@ def Calcaverage(month):
 
 def main():
     try:
-        flow = open(r"C:\PSP\Group4\group4psp\StLawrenceFlow.csv")          # opens the file required to read the input
+        flow = open(r"https://github.com/danammckee/Projects/Python/StLawrenceFlow.csv")          # opens the file required to read the input
         freader = list(csv.reader(flow))			# sets the file that is read to a list of lists					
         flow.close()								# closes the file once the reader is done
         x = 1									    # sets x to 1 because we don't want the first row of the csv
