@@ -1,0 +1,296 @@
+<!--https://developers.arcgis.com/javascript/latest/sample-code/layers-csv/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/layers-custom-elevation-exaggerated/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol3D.html-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/visualization-point-styles/-->
+<!--https://www.esri.com/arcgis-blog/products/js-api-arcgis/mapping/take-advantage-of-the-javascript-symbol-playground/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2017/03/28/take-advantage-of-the-javascript-symbol-playground-->
+<!--https://developers.arcgis.com/documentation/mapping-apis-and-location-services/maps/graphics/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/sceneview-background/-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>The Cities of Love</title>
+
+    <style>
+      html,
+      body {
+		height: 100%;
+        margin: 0;
+        padding: 0;
+		background-color: #F6EBE9;
+		font-family: 'Hind', sans-serif;
+      }	  
+	  	  
+	  #viewDiv {
+		padding: 0;
+		height: 70%;
+		width: 70%;
+		margin: auto;
+        	background-color: #F590B0;
+		border-style: ridge;
+		border-width: 20px;
+		border-color: #F590B0;
+      }
+      #viewDiv canvas{
+        filter: drop-shadow(16px 16px 10px rgba(0,0,0, 0.5));
+      }
+
+      .esri-legend {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+	  
+	  .titleblock {
+			  background-color: #F5DADC;
+			  text-align: center;
+			  color: white;
+			  padding: 30px;
+		  	  text-shadow: 0 0 5px #525252;
+			  margin-bottom: 10px;
+			}
+			
+			.title {
+				font-size: 70px;
+			}
+
+			.bodytitle {
+				font-size: 60px;
+			}
+
+			.bodyheader {
+				text-decoration: underline;
+				text-decoration-color: #F590B0;
+				font-size: 30px;
+			}
+			
+			.firstHeading {
+				color: rgb(42, 160, 160);
+				font-size: 20px;
+			}
+			
+			.bodywords {
+				font-size: 20px;
+			}
+			
+			.bodywords2 {
+				font-size: 25px;
+				text-align: center;
+			}
+	    
+	    		.bodywords3 {
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			.section {
+				padding-right: 60px;
+				padding-left: 60px;
+				width: 70%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.nav {
+			  overflow: hidden;
+			  background-color: LightGray;
+			  border: 3px solid #F5DADC;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+			  padding: 10px;
+			} 
+
+			li a {
+			  float: left;
+			  display: block;
+			  color: Black;
+			  text-align: center;
+			  padding: 8px;
+			  text-decoration: none;
+			}
+
+			ul {
+			  list-style-type: none;
+			  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+			  font-weight: bold;
+			  padding: 0;
+			  margin: 0;
+			}
+	
+			li a:hover {
+			  background-color: #F590B0;
+			  color: black;
+			}
+						
+			.footer {
+				bottom: 0;
+				left: 0;
+				right: 0;
+				letter-spacing: 0.11em;
+				margin-top: 10px;
+				margin-bottom: 1%;
+				background-color: #F5DADC;
+				padding: 4px 0 4px 0;
+			}
+
+			.footertext {
+				position: relative;
+				color: white;
+				text-align: center;
+				padding: 0;
+			}
+
+			.footertext2 {
+				position: relative;
+				font-size: 15px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				padding: 0;
+			}
+
+
+			@media (max-width: 600px) {
+			  .column {
+				width: 100%;
+			  }
+	  
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.18/"></script>
+
+    <script>
+      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView", "esri/layers/support/LabelClass", "esri/widgets/Legend"], function(
+        WebScene,
+        CSVLayer,
+        SceneView,
+		LabelClass, Legend
+      ) {
+        // If CSV files are not on the same domain as your website, a CORS enabled server
+        // or a proxy is required.
+        const url = "https://danammckee.github.io/Projects/Websites/lovecities.csv"
+        // Paste the url into a browser's address bar to download and view the attributes
+        // in the CSV file. These attributes include:
+        // * city - City
+		// * place - Place
+		// * country - Country
+
+        const template = {
+          title: "Cities of Love",
+          content: "{city} - {place}, {country}."
+        };
+		
+		//Can change to a GeoJSON layer: https://developers.arcgis.com/javascript/latest/sample-code/layers-geojson/
+        const csvLayer = new CSVLayer({
+          url: url,
+          copyright: "Dana McKee",
+          popupTemplate: template
+        });
+
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol.html//
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html//
+		//https://developers.arcgis.com/javascript/latest/sample-code/mars///
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ObjectSymbol3DLayer.html
+		// Plan: Make cylinders/pins icons/objects for location
+        csvLayer.renderer = {
+          type: "simple", // autocasts as new SimpleRenderer(); MUST be set to SIMPLE for this?
+          symbol: {
+            type: "point-3d", // autocasts as new PointSymbol3D() "picture-fill" "web-style"
+            // for this symbol a circle is used
+            symbolLayers: [{
+              type: "icon", // autocasts as new IconSymbol3DLayer()
+              resource: { primitive: "circle"},
+              material: { color: [245, 218, 220, 1] },
+			  outline: {color: [245, 144, 176, 0.5], 
+			  size: 5},
+              size: 16
+            }]
+          }
+        };
+		
+        const map = new WebScene({
+          portalItem: {
+            id: "a467ef1140de4e88acf34d38df9fb869"
+          }
+        });
+
+        map.add(csvLayer);
+
+        const view = new SceneView({
+          container: "viewDiv",
+          qualityProfile: "high",
+          map: map,
+          alphaCompositingEnabled: true,
+		  environment: {
+		  // set a transparent background
+			background: {
+			type: "color",
+			color: [255, 254, 244,0]
+			},
+			// disable stars
+            starsEnabled: false,
+            // disable atmosphere
+            atmosphereEnabled: false
+          },
+          highlightOptions: {
+            fillOpacity: 0,
+            color: "#ffffff"
+          },
+          constraints: {
+            altitude: {
+              min: 700000
+            }
+          }
+        });
+        view.environment.background = {
+          type: "color",
+          color: [245, 218, 220, 100]
+        };
+      });
+    </script>
+  </head>
+
+	<div class="titleblock">
+		<h1 class ="title">The Cities of Love</h1>
+	</div>
+	
+
+	<div class="section">
+		<div>
+			<h2 class="bodyheader">Love Around the World</h2>
+			<p class="bodywords"> With love in the air, we wanted to show all the Love around the 
+			world.  There are a number of cities around the globe aptly named "Love"! Not only that
+			but you can find a number of love and Valentine's Day inspired names as well on any continent
+			including Valentines in Uruguay, Romance in the Dominican Republic, or even Heart's Content
+			on the Eastern Shores of Canada in Newfoundland and Labrardor.</p>
+			<p class="bodywords2"> Take a look around the world and find some <b><span style="color:#F590B0">Love!</span></b></p>
+	 	</div>
+	 </div>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+  
+    	<div class="section">
+		<div>
+			<p class ="bodywords2"> Make sure to take a look here for the Canadian Love Special treat found at 
+			<a href=" https://danammckee.github.io/Projects/Websites/LoveSask.html" target="_blank"><span style="color:#F590B0">Love, Saskatchewan<span></a> </p>
+	 	</div>
+	 </div>
+  
+  
+  	<div class="section">
+		<div>
+			<p class="bodywords3"> Note: The list of citites will continue to be updated! Check back 
+			for more Cities of Love!</p>
+	 	</div>
+	 </div>
+  
+	<div class="footer">
+		<p class ="footertext">2021 Dana McKee | Fleming College GEOM99</p>
+	 </div>
+  
+</html>
