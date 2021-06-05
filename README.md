@@ -3,17 +3,17 @@
 
 ## Maps
 
-### 1. Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
+1. ### 1. Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
 
 A simplistic design for tourists visiting Quebec City to enjoy the top poutine places in town.
 
 ![Poutine Crawl](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
 
-### 2. Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
+2. ### 2. Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
 
 A multi-criteria analysis poster of the vulunerability of sea level rise for Victoria, British Columbia.
 
-### 3. New York, New York [Map](https://danammckee.github.io/Projects/Maps/NewYork.pdf)
+3. ### 3. New York, New York [Map](https://danammckee.github.io/Projects/Maps/NewYork.pdf)
 
 A map of New York City created from the ESRI MOOC Cartography course that showcases the result of working with label classes and advanced label settings. 
 
@@ -24,8 +24,9 @@ A map of the world's oceans using the infamous spilhaus projection.
 ## Websites, Story Maps, & Dashboards
 
 * #### Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/index.html)
+  * Words
 
-* #### The Liberty Project [Ride 4 Freedom](https://www.the-libertyproject.org/ride-4-freedom) Event Webpage
+* #### The Liberty Project: Ride 4 Freedom [Webpage](https://www.the-libertyproject.org/ride-4-freedom)
 
 * #### Exploring GNSS Accuracy and Precision [Story Map](https://storymaps.arcgis.com/stories/486c2e8f1c4e43d28a85ecc38877fc4d)
 
