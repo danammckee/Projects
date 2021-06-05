@@ -9,7 +9,7 @@
 ![Poutine Crawl](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
 
 * #### Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
- * A multi-criteria analysis poster of the vulunerability of sea level rise for Victoria, British Columbia.
+  * A multi-criteria analysis poster of the vulunerability of sea level rise for Victoria, British Columbia.
 
 3. ### 3. New York, New York [Map](https://danammckee.github.io/Projects/Maps/NewYork.pdf)
 
