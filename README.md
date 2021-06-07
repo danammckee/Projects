@@ -1,6 +1,11 @@
 # Dana McKee - GIS Applications Specialist
 ## **The following repository showcases noteable projects that I completed as a student of the GIS Applications Specialist Graduate Certificate Program at Sir Sandford Fleming College.**
 
+## Resume
+* #### [Resume](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
+
+!(https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
+
 ## Maps
 
 * #### Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
