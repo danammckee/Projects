@@ -4,7 +4,7 @@
 ## Resume
 * #### [Resume](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
 
-!(https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
+!(https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.JPG)
 
 ## Maps
 
