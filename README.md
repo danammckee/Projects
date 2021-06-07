@@ -2,9 +2,9 @@
 ## **The following repository showcases noteable projects that I completed as a student of the GIS Applications Specialist Graduate Certificate Program at Sir Sandford Fleming College.**
 
 ## Resume
-* #### [Resume](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
+* #### [Personal Resume](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
 
-!(https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.JPG)
+![Dana McKee Resume](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.JPG)
 
 ## Maps
 
