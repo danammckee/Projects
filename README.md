@@ -6,13 +6,8 @@
 
 ## Maps
 
-* #### Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf target="_blank)
-* [Link](https://example.org/ "title" target="_blank")
-
 * #### Poutine Crawl of Québec City [Map](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.pdf)
   * A simplistically designed map for tourists visiting Quebec City to enjoy the top poutine places in town.
-
-![Poutine Crawl](https://danammckee.github.io/Projects/Maps/PoutineCrawlofQuebecCity.jpg)
 
 * #### Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
   * A multi-criteria analysis poster of the vulunerability of sea level rise for Victoria, British Columbia.
