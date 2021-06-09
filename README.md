@@ -28,7 +28,7 @@
   * A map of Chilliwack, British Columbia that was generated through image processing and enhancements of a Landsat8 OLI imae in PCI Geomatica and ArcGIS Pro 2.7.1.
 
 * #### Global Earthquakes Since 1989 [Map](https://danammckee.github.io/Projects/Maps/Earthquakes_Since_1989.jpg)
- * A map showcasing earthquakes that have occurred across the globe since 1989.
+  * A map showcasing earthquakes that have occurred across the globe since 1989.
 
 * #### Hurricanes Across The World [Map](https://danammckee.github.io/Projects/Maps/World_Hurricanes.jpg)
   *  A cartographic view of the World from above showcasing hurricanes that have occured.
