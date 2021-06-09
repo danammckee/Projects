@@ -63,7 +63,7 @@
 ## Training and Certification
 
 * #### ESRI Training [Transcript](https://danammckee.github.io/Projects/ESRITraining/Dana_McKee_ESRITrainingTranscript.pdf)
- * Transcript containing courses completed through ESRI Training.
+  * Transcript containing courses completed through ESRI Training.
 
 ## Remote Sensing Work
 
