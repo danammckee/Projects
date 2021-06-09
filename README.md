@@ -1,5 +1,5 @@
 # Dana McKee - GIS Applications Specialist
-## **The following repository showcases noteable projects that I completed as a student of the GIS Applications Specialist Graduate Certificate Program at Sir Sandford Fleming College.**
+## **The following repository showcases noteable projects that I completed during my studies for the GIS Applications Specialist Graduate Certificate Program at Sir Sandford Fleming College.**
 
 ## Resume
 * #### [Personal Resume (PDF)](https://danammckee.github.io/Projects/Profile/DanaMcKee_Resume.pdf)
