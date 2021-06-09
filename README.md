@@ -67,5 +67,35 @@
 
 ## Remote Sensing Work
 
-* #### Chilliwack, BC [Imagery](https://danammckee.github.io/Projects/RemoteSensing/Chilliwack_BC.jpg)
-  * Words
+* #### Chilliwack, BC [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Chilliwack_BC.jpg)
+  * Satellite imagery of Chilliwack, British Columbia that was generated through image processing and enhancements of a Landsat8 OLI imae in PCI Geomatica and ArcGIS Pro 2.7.1.
+  * [Map](https://danammckee.github.io/Projects/Maps/Chilliwack_BC_SatelliteImagery.jpg)
+
+* #### Optical Supervised Classification [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Optical_Supervised_Classification.jpg)
+  * [Map](https://danammckee.github.io/Projects/RemoteSensing/OakRidgesMoraine.jpg)
+
+* #### Orthorectified CIR [Aerial Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Orthorectified_CIR_Aerialimage.jpg)
+
+* #### Geometric Correction [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/GeometricCorrection.jpg)
+
+* #### Multiresolution Segmentation [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Multiresolution_Segmentation.jpg)
+
+* #### Arithmetically Merged Landsat-Spot [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/ArithmeticallyMerged_Landsat-Spot.jpg)
+
+* #### Pansharp Enhancement [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Pansharp.jpg)
+
+* #### Panchromatic Sharpened [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/PanchromaticImage_Sharpened.jpg)
+
+* #### Pansharp Enhancement [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Pansharp.jpg)
+
+* #### Parallelpiped Classifer Method and Minimum Distance Classification Method [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/ParallelpipedClassiferMethod_and_MinimumDistanceClassificationMethod.jpg)
+
+
+
+
+
+
+
+
+
+  
