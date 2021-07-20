@@ -12,6 +12,9 @@
 * #### Vulnerability Sea Level Rise: Victoria, BC [Map](https://danammckee.github.io/Projects/Maps/SeaLevelRise_Victoria_BC.pdf)
   * A multi-criteria analysis poster of the vulunerability of sea level rise for Victoria, British Columbia.
 
+* #### Ride 4 Freedom Storytelling GIS [Web Map](https://vanritto.github.io/libertyproject/storymap/index.html)
+  * An interactive scrolly storytelling GIS Web Map generated using Mapbox to tell the story of The Libery Project, Mozambique, and their new fundraising initiative, Ride 4 Freedom
+
 * #### New York, New York [Map](https://danammckee.github.io/Projects/Maps/NewYork.pdf)
   * A map of New York City created from the ESRI MOOC Cartography course that showcases the result of working with label classes and advanced label settings. 
 
@@ -41,12 +44,15 @@
 
 ## Websites, Story Maps, & Dashboards
 
-* #### Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/index.html)
-  * Website showcasing research and solutions for the final group project that was developed by the Vanritto team for the Fleming College course, GEOM99 Web GIS Development that explored web map options to develop a web solution that is interactive and engaging for the public.
-
 * #### The Liberty Project: Ride 4 Freedom [Webpage](https://www.the-libertyproject.org/ride-4-freedom)
   * The fundrasing event webpage developed for The Liberty Project. The capstone project for the GIS Applications Specialist Graduate Certificate Program at Fleming College. The event webpage allows user to donate and register for the event as well as learn more about the organization through an engaging scrollytelling web map that was generated using Mapbox and JavaScript.
-   * Live June 30th, 2021  
+   * Live June 30th, 2021 
+
+* #### Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/index.html)
+  * Website showcasing research and solutions for the final group project that was developed by the Vanritto team for the Fleming College course, GEOM99 Web GIS Development that explored web map options to develop a web solution that is interactive and engaging for the public. 
+
+* #### [Website](https://vanritto.github.io/2115libertyproject/index.html)
+  * Website showcasing the methodology and final solutions for the capstone collaborative group project that was developed by the team, Vanritto, for the Fleming College course, APST62, that developed a fundraising event webpage with an interactive GIS Web Map and custom database for the client, The Liberty Project
 
 * #### Exploring GNSS Accuracy and Precision [ESRI Story Map](https://storymaps.arcgis.com/stories/486c2e8f1c4e43d28a85ecc38877fc4d)
   * An ESRI Story Map showcasing the explorations of GNSS accuracy and precision.
@@ -74,21 +80,17 @@
 * #### Optical Supervised Classification [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Optical_Supervised_Classification.jpg)
   * [Map](https://danammckee.github.io/Projects/RemoteSensing/OakRidgesMoraine.jpg)
 
-* #### Orthorectified CIR [Aerial Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Orthorectified_CIR_Aerialimage.jpg)
+* #### Orthorectified CIR [Aerial Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Orthorectified_CIR_Aerialimage.png)
 
-* #### Geometric Correction [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/GeometricCorrection.jpg)
+* #### Geometric Correction [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/GeometricCorrection.JPG)
 
-* #### Multiresolution Segmentation [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Multiresolution_Segmentation.jpg)
+* #### Multiresolution Segmentation [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Multiresolution_Segmentation.png)
 
 * #### Arithmetically Merged Landsat-Spot [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/ArithmeticallyMerged_Landsat-Spot.jpg)
 
 * #### Pansharp Enhancement [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Pansharp.jpg)
 
-* #### Panchromatic Sharpened [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/PanchromaticImage_Sharpened.jpg)
-
-* #### Pansharp Enhancement [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/Pansharp.jpg)
-
-* #### Parallelpiped Classifer Method and Minimum Distance Classification Method [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/ParallelpipedClassiferMethod_and_MinimumDistanceClassificationMethod.jpg)
+* #### Parallelpiped Classifer Method and Minimum Distance Classification Method [Imagery Example](https://danammckee.github.io/Projects/RemoteSensing/ParallelpipedClassiferMethod_and_MinimumDistanceClassificationMethod.JPG)
 
 
 
