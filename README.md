@@ -24,7 +24,7 @@
 * #### The World Above [Map](https://danammckee.github.io/Projects/Maps/TheWorld.jpg)
   * A cartographic view of the World from above. 
 
-* #### Massachusetts [Map](https://danammckee.github.io/Projects/Maps/MapOfMassachusetts.jpg)
+* #### Massachusetts [Map](https://danammckee.github.io/Projects/Maps/MapOfMassachusetts.JPG)
   * A map of Massachusetts generated from ESRI's MOOC Cartography course.
 
 * #### Chilliwack, BC [Map](https://danammckee.github.io/Projects/Maps/Chilliwack_BC_SatelliteImagery.jpg)
