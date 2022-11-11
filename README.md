@@ -36,10 +36,10 @@
 * #### Hurricanes Across The World [Map](https://danammckee.github.io/Projects/Maps/World_Hurricanes.jpg)
   *  A cartographic view of the World from above showcasing hurricanes that have occured.
 
-* #### Camp Survey Plan [Map](https://danammckee.github.io/Projects/Maps/CampSurveyPlan_TotalStationTraverse_BarkLake2014.jpg)
+* #### Camp Survey Plan [Map](https://danammckee.github.io/Projects/Maps/CampSurveyPlan_TotalStationTraverse_BarkLake2014.JPG)
   * A camp survey plan for a total statin traverse generated in AutoCAD.
 
-* #### Site Plan [Map](https://danammckee.github.io/Projects/Maps/SitePlan_S1-2Lot18Concession5.jpg)
+* #### Site Plan [Map](https://danammckee.github.io/Projects/Maps/SitePlan_S1-2Lot18Concession5.JPG)
   * A site plan for the City of Kawartha Lakes generated in AutoCAD.
 
 ## Websites, Story Maps, & Dashboards
