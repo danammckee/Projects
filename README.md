@@ -42,26 +42,26 @@
 * #### Site Plan [Map](https://danammckee.github.io/Projects/Maps/SitePlan_S1-2Lot18Concession5.JPG)
   * A site plan for the City of Kawartha Lakes generated in AutoCAD.
 
-## Websites, Story Maps, & Dashboards
-
-* #### The Liberty Project: Ride 4 Freedom [Webpage](https://www.the-libertyproject.org/ride-4-freedom)
-  * The fundrasing event webpage developed for The Liberty Project. The capstone project for the GIS Applications Specialist Graduate Certificate Program at Fleming College. The event webpage allows user to donate and register for the event as well as learn more about the organization through an engaging scrollytelling web map that was generated using Mapbox and JavaScript.
-   * Live June 30th, 2021 
+## Websites
 
 * #### Web GIS Solutions [Website](https://luna.flemingcollege.ca/geom99/2021/web1/index.html)
-  * Website showcasing research and solutions for the final group project that was developed by the Vanritto team for the Fleming College course, GEOM99 Web GIS Development that explored web map options to develop a web solution that is interactive and engaging for the public. 
+  * Website showcasing the research and methodology plan for the final group project that was developed by the Vanritto team for the Fleming College course, GEOM99 Web GIS Development that explored web map options to develop a web solution that is interactive and engaging for the public. 
 
-* #### [Website](https://vanritto.github.io/2115libertyproject/index.html)
+* #### Final Web GIS Project [Website](https://vanritto.github.io/2115libertyproject/index.html)
   * Website showcasing the methodology and final solutions for the capstone collaborative group project that was developed by the team, Vanritto, for the Fleming College course, APST62, that developed a fundraising event webpage with an interactive GIS Web Map and custom database for the client, The Liberty Project
-
-* #### Exploring GNSS Accuracy and Precision [ESRI Story Map](https://storymaps.arcgis.com/stories/486c2e8f1c4e43d28a85ecc38877fc4d)
+  
+* #### The Liberty Project: Ride 4 Freedom [Webpage](https://www.the-libertyproject.org/ride-4-freedom)
+ * The fundrasing event webpage developed for The Liberty Project. The capstone project for the GIS Applications Specialist Graduate Certificate Program at Fleming College. The event webpage allows user to donate and register for the event as well as learn more about the organization through an engaging scrollytelling web map that was generated using Mapbox and JavaScript.
+   * Live June 30th, 2021 (Website may be removed when event is not live)
+   
+<!-- * #### Exploring GNSS Accuracy and Precision [ESRI Story Map](https://storymaps.arcgis.com/stories/486c2e8f1c4e43d28a85ecc38877fc4d)
   * An ESRI Story Map showcasing the explorations of GNSS accuracy and precision.
 
 * #### COVID 19 Cases in Toronto, Ontario [ESRI Dashboard](https://fleming.maps.arcgis.com/apps/dashboards/d4b1d1890832486484e9274455c2a012)
   * AN ESRI Dashboard showcasing COVID-19 cases and Emergency Services in Toronto, Ontario by neighbourhood.
 
 * #### British Columbia Ski Hills [Website](https://danammckee.github.io/Projects/Websites/BCSkiHills.html)
-  * Using Google map technology, this simple website showcases all the ski hills in British Columbia.
+  * Using Google map technology, this simple website showcases all the ski hills in British Columbia. -->
 
 * #### Cities of Love [Website](https://danammckee.github.io/Projects/Websites/Vday.html)
   * Customization using tutorials from ArcGIS Online Developers website produced this simple website with 3D globe of the Earth with a Valentine's Day twist, showing cities around the world named Love.
