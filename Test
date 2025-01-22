@@ -1,1 +1,20 @@
-
+graph TD
+    A[Esri Canada 2025-2030] --> B[Canadian Software]
+    B --> C[Common Thread]
+    B --> D[Core Esri Business]
+    B --> E[Central Business]
+    B --> F[Canada Software]
+ 
+    C --> G[Common Data Exchanges]
+    G --> H[GIS Users/Professionals]
+    G --> I[Data Authority]
+    G --> J[Aggregate Integration]
+ 
+    D --> K[Esri Inc.]
+    D --> L[Schedule]
+    D --> M[Transfer]
+    D --> N[Solutions]
+    N --> N1[Land Receipt/Parcel Edit]
+    N --> N2[Zoning Edit/Urban]
+    N --> N3[Address Editor]
+    N --> N4[Road Editor]
